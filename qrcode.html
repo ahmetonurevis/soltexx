@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürdürülebilirlik Pasaportu | DN4338</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            color: #000000;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            border: 1.5px solid #000;
+            padding: 30px;
+            position: relative;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .sub-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+        }
+
+        .data-section {
+            margin-bottom: 30px;
+        }
+
+        .data-group {
+            margin-bottom: 25px;
+        }
+
+        .label {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            border-left: 3px solid #000;
+            padding-left: 10px;
+        }
+
+        .production-timeline {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .timeline-label {
+            font-size: 13px;
+            text-align: right;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* BUTON STİLİ (Link için güncellendi - alt çizgiyi kaldırdım) */
+        .eco-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #000;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            text-decoration: none;
+            /* Link olduğu için altı çizilmesin */
+        }
+
+        .eco-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .eco-button svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="brand">Product Passport</div>
+            <div class="sub-title">Sustainability Data Sheet</div>
+        </header>
+
+        <div class="data-section">
+            <div class="data-group">
+                <span class="label">Product Identification</span>
+                <span class="value">DN4338 / Softly Semidense</span>
+            </div>
+
+            <div class="data-group">
+                <span class="label">Material Composition</span>
+                <span class="value">Spunyarn Polyester</span>
+            </div>
+
+            <div class="data-group">
+                <span class="label">Sustainability Type</span>
+                <span class="value">100% Pre-Consumer Recycled</span>
+            </div>
+
+            <div class="data-group">
+                <span class="label">Resource Origin</span>
+                <span class="value">Europe</span>
+            </div>
+
+            <div class="data-group">
+                <span class="label">Efficiency Rate</span>
+                <span class="value">650gr Waste per 1m Fabric</span>
+            </div>
+        </div>
+
+        <div class="production-timeline">
+            <span class="label" style="margin-bottom: 15px;">Traceability Timeline</span>
+
+            <div class="timeline-item">
+                <span class="timeline-date">05.01.2025</span>
+                <span class="timeline-label">Recycle History</span>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">24.02.2025</span>
+                <span class="timeline-label">Yarn Production</span>
+            </div>
+
+            <div class="timeline-item">
+                <span class="timeline-date">10.04.2025</span>
+                <span class="timeline-label">Fabric Production</span>
+            </div>
+        </div>
+
+        <footer>
+            <a href="IFC-T-[1314]-MUL-2512.pdf" class="eco-button" target="_blank">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                View & Download Certificate
+            </a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Soltex Design</title>
+    <style>
+        /* GENEL AYARLAR (Anasayfa ile uyumlu) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #e9e5df; /* Aynı arkaplan rengi */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* HEADER & NAVİGASYON */
+        header {
+            background-color: #e9e5df;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 160px; 
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* LOGO */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 120px; 
+            width: auto;
+            display: block;
+        }
+
+        /* MENU LINKLERI */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            color: #444;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative; /* Alt çizgi için gerekli */
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        /* Aktif sayfa alt çizgi efekti (Tasarımda About Us altında çizgi var) */
+        .nav-links a.active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 200px 0 100px 0; /* Header payı */
+            display: flex;
+            align-items: flex-start; /* İçerikleri yukarı hizala */
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        /* Sol Taraf: Görsel */
+        .about-image {
+            flex: 1;
+            max-width: 45%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Tasarımdaki gibi koyu bir çerçeve veya gölge efekti eklenebilir */
+            box-shadow: 10px 10px 0px rgba(50, 50, 50, 0.1); 
+        }
+
+        /* Sağ Taraf: Metin */
+        .about-content {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .about-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #fff; /* Başlık beyaz görünüyor görselde, ama arkaplan açık renk */
+            /* Görseldeki başlık "about us" beyaz renkte ama arkaplan açık. 
+               Muhtemelen bir hata yoksa yazı rengi koyu olmalı. 
+               Görseldeki "about us" yazısı beyaz gibi dursa da okunabilirlik için koyu yapıyorum.
+               Eğer görseldeki gibi beyaz isterseniz color: #fff yapın. */
+            color: #333; 
+            margin-bottom: 20px;
+            text-transform: lowercase; /* Tasarımdaki gibi küçük harf */
+            letter-spacing: 1px;
+        }
+        
+        /* Tasarımdaki "about us" başlığı görselde beyaz gibi parlıyor 
+           ancak zemin açık renk olduğu için bu bir tasarım yansıması olabilir.
+           Okunabilir olması için #888 (gri) veya #333 (siyah) kullanıyorum. */
+        .about-content h1 {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0,0,0,0.2); /* Hafif gölge ile beyaz yapalım */
+            font-size: 3.5rem;
+        }
+
+        /* Alternatif: Eğer yazı okunmazsa bu satırı silin, yerine color: #333; yazın */
+        .about-content h1 { color: #555; } /* Daha güvenli bir gri tonu */
+
+        .about-content p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #222;
+            margin-bottom: 20px;
+            text-align: justify; /* Metni iki yana yasla */
+        }
+
+        .about-footer-text {
+            font-weight: 600;
+            margin-top: 20px;
+            display: block;
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e9e5df;
+            color: #666;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #dcd8d2;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            header { height: 100px; }
+            .logo img { max-height: 60px; }
+            .nav-links { display: none; }
+            
+            .about-section {
+                flex-direction: column;
+                padding-top: 120px;
+            }
+            .about-image, .about-content {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Soltex Logo">
+                    </a>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <div class="about-image">
+                <img src="about_collage.png" alt="Fabric Production Collage">
+            </div>
+
+            <div class="about-content">
+                <h1>about us</h1>
+                <p>
+                    First of all, we are a family company. All family members have been in the textile business since 1960. Currently the 3rd generation manages the company. The 4th generation has already started to develop new products. The center of textile in Turkey is the city of Bursa. Bursa is an ancient city and has been producing textile products for exactly 1400 years. In the light of the ancient knowledge coming from this tradition, we produce in these lands. We carry out all operations under full control, from yarn production to fabric weaving and fabric dyeing. We take the production of recycled raw materials very seriously. We renew our recycling certificates every year. And we do much more than certification in this regard. For a more livable world, we recycle all petrochemical products in the production phase. We produce fireproof fabric at international standards. Apart from plain fabric production, we also produce fancy fabric. So in the end, we;
+                </p>
+                <span class="about-footer-text">We produce fabric from past to future.</span>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Soltex Fabric</p>
+        </div>
+    </footer>
+
+</body>
+</html>
